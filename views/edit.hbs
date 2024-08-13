@@ -1,0 +1,78 @@
+{{>header}}
+<title>CRUD | Update</title>
+{{>navbar}}
+
+<div class="container-fluid mid-section my-3">
+    <div class="row">
+        <div class="col-xl-9 col-md-10 col-sm-11 m-auto">
+            <h5 class="background text-center text-light p-2">Update Employee Record</h5>
+            <form action="" method="post">
+                <div class="mb-3">
+                    <label>Name*</label>
+                    <input type="text" name="name" placeholder="Full Name"
+                        class="form-control border-secondary border-2" value="{{data.name}}">
+                    {{#if errorMessage.name}}
+                    <p class="text-danger">{{errorMessage.name}}</p>
+                    {{/if}}
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label>Email*</label>
+                        <input type="email" name="email" placeholder="Email Address"
+                            class="form-control border-secondary border-2" value="{{data.email}}">
+                        {{#if errorMessage.email}}
+                        <p class="text-danger">{{errorMessage.email}}</p>
+                        {{/if}}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Phone*</label>
+                        <input type="text" name="phone" placeholder="Phone Number"
+                            class="form-control border-secondary border-2" value="{{data.phone}}">
+                        {{#if errorMessage.phone}}
+                        <p class="text-danger">{{errorMessage.phone}}</p>
+                        {{/if}}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label>Designation*</label>
+                        <input type="text" name="designation" placeholder="Designation"
+                            class="form-control border-secondary border-2" value="{{data.designation}}">
+                        {{#if errorMessage.designation}}
+                        <p class="text-danger">{{errorMessage.designation}}</p>
+                        {{/if}}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Salary*</label>
+                        <input type="number" name="salary" placeholder="Salary"
+                            class="form-control border-secondary border-2" value="{{data.salary}}">
+                        {{#if errorMessage.salary}}
+                        <p class="text-danger">{{errorMessage.salary}}</p>
+                        {{/if}}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label>City</label>
+                        <input type="text" name="city" placeholder="City Name"
+                            class="form-control border-secondary border-2" value="{{data.city}}">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>State</label>
+                        <input type="text" name="state" placeholder="State Name"
+                            class="form-control border-secondary border-2" value="{{data.state}}">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary w-100 background">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{{>footer}}
