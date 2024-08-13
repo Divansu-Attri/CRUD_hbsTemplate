@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 const express = require("express");
 const app = express();
 const hbs = require("hbs");
@@ -115,7 +117,7 @@ app.post("/edit/:_id",async(req,res)=>{
 })
 
 ConnectDB().then(() => {
-    const PORT = 9000;
+    const PORT = process.env.PORT || 5000;
     app.listen(PORT, () => {
         console.log(`Server is Running at http://localhost:${PORT}`);
     });
