@@ -22,7 +22,7 @@ This is a simple CRUD (Create, Read, Update, Delete) application built using **E
 
 2. **Navigate to the project directory**:
 
-    cd your-repo-name
+    cd CRUD-hbsTemplate
 
 3. **Install the dependencies**:
 
